@@ -1,0 +1,16 @@
+Dijkstra Algo
+Dijkstra algo is not capable to differentiate between Negative edge weight cycle is present in graph or not ? 
+
+1. Positive edge weight:- Dijkstra always PASS if all edge weight in a graph is positive.
+
+2. Negative edge wt. and No -ve edge wt. cycle:- Dijkstra always PASS even if we have some edges weight as Negative but NO cycle/loop in graph having negative edge weight.
+[i.e No Negative edge weight cycle is present].
+
+3. Negative edge wt. and -ve edge wt. cycle:- Dijkstra may PASS/FAIL even if we have some edges weight as negative along with cycle/loop in graph having negative edge weight.
+
+For this , we will use Bellman Ford algorithm .A very important application of Bellman Ford is to check if there is a negative cycle in the graph, for which we couldn't be able to use dijkstra.
+
+However, Dijkstra's algorithm greedily selects the minimum-weight node that has not yet been processed, and performs this relaxation process on all of its outgoing edges; 
+in contrast, the Bellman–Ford algorithm simply relaxes all the edges, and does this |V | − 1 times, where |V | is the number of vertices in the graph.
+Dijkstra is however generally considered better in the absence of negative weight edges, as a typical binary heap priority queue implementation has O((|E|+|V|)log|V|) time complexity [A Fibonacci heap priority queue gives O(|V|log|V| + |E|)], 
+while the Bellman-Ford algorithm has O(|V||E|) complexity.
