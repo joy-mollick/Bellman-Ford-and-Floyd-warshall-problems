@@ -56,7 +56,7 @@ int main()
         for(int k = 0; k < n; ++k) {            // Floyd-Warshall algorithm.
             for(int i = 0; i < n; ++i) {
                 for(int j = 0; j < n; ++j) {
-                    if(matrix[i][j] > (matrix[i][k]) + (matrix[k][j]) + passingTax[k]) {
+                    if(matrix[i][j] > (long long) (matrix[i][k]) + (long long) (matrix[k][j]) + passingTax[k]) {
                         matrix[i][j] = matrix[i][k] + matrix[k][j] + passingTax[k];
                         next[i][j] = next[i][k];
                     }
